@@ -2,14 +2,15 @@ public class FrogSimulation
 {
     private int goalDistance;
     private int maxHops;
-    
+    private int maxHopsHolder; // you MUST declare this!
+
     public FrogSimulation(int dist, int numHops)
     {
         goalDistance = dist;
         maxHops = numHops;
-        maxHopsHolder = numHops;  // ignore this, it's used for testing
+        maxHopsHolder = numHops; // this line is fine
     }
-    
+
     public boolean simulate()
     { 
         int total = 0;
@@ -24,7 +25,7 @@ public class FrogSimulation
         }
         return false;
     }
-    
+
     public double runSimulations(int num)
     { 
         int successes = 0;
